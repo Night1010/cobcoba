@@ -18,7 +18,7 @@ class ProductController extends Controller
     public function index()
     {
         //get all posts
-        $products = product::latest()->paginate(5);
+        $products = product::all();
 
         //return collection of posts as a resource
         return new CobaResource(true, 'List Data Product', $products);

@@ -18,7 +18,7 @@ class serviceController extends Controller
     public function index()
     {
        
-        $services = service::latest()->paginate(5);
+        $services = service::all();
 
        
         return new CobaResource(true, 'List Data Service', $services);
